@@ -20,6 +20,11 @@ class CalculatorTest {
     }
 
     @Test
+    void dividesNumbers() {
+        assertEquals(2, calculator.divide(6, 3));
+    }
+
+    @Test
     void rejectsDivisionByZero() {
         assertThrows(IllegalArgumentException.class, () -> calculator.divide(4, 0));
     }
